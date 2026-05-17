@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 20px));
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(calc(0% - -20px));
+  }
+}
+
+.animate-scroll {
+    display: flex;
+  width: fit-content;
+  animation: scroll 12s linear infinite;
+  will-change: transform;
+}
+.animate-scroll-2 { 
+  display: flex;
+  width: fit-content;
+  animation: scroll2 12s linear infinite;
+  will-change: transform;
+}
+.animate-scroll:hover, .animate-scroll-2:hover {
+  animation-play-state: paused;
+}
+.slideLeft {
+  animation: slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, filter;
+}
+
+.slideRight {
+  animation: slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity, filter;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  40% {
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: translateX(-120px) scale(0.92);
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  40% {
+    opacity: 0.7;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: translateX(120px) scale(0.92);
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
