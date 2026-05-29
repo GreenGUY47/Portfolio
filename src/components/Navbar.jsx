@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 left-0 right-0 z-50">
       <div className="navbar  flex justify-between p-4 bg-gray-800 w-full text-white shadow-[1px_5px_8px_-3px_rgba(0,0,0,0.5)]      sm:hidden">
-        <h1 className="cursor-default">LOGO HERE</h1>
+        <h1 className="cursor-default"><b><i>Portfolio</i></b></h1>
 
         <button
           className="cursor-pointer"
