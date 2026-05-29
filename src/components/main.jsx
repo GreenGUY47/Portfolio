@@ -6,6 +6,7 @@ import Home from './Home'
 import AboutMe from '../../About'
 import Projects from './Projects'
 import CV from './CV'
+import Contact from './Contact'
 import Footer from './Footer'
 
 
@@ -27,6 +28,9 @@ createRoot(document.getElementById('root')).render(
       </section>
       <section id='cv' className='scroll-mt-0'>
         <CV />
+      </section>
+      <section id='contact' className='scroll-mt-0'>
+        <Contact />
       </section>
     </main>
     <footer>
