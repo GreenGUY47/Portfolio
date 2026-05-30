@@ -3,37 +3,63 @@
 html {
   scroll-behavior: smooth;
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 20px));
-  }
-}
-@keyframes scroll2 {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(calc(0% - -20px));
-  }
+.scroller {
+  width: 100%;
+  overflow: hidden;
 }
 
-.animate-scroll {
-    display: flex;
-  width: fit-content;
-  animation: scroll 12s linear infinite;
-  will-change: transform;
-}
-.animate-scroll-2 { 
+.scroller-track {
   display: flex;
   width: fit-content;
-  animation: scroll2 12s linear infinite;
+  animation: marquee 22s linear infinite;
   will-change: transform;
 }
-.animate-scroll:hover, .animate-scroll-2:hover {
+
+.scroller-track span {
+  flex-shrink: 0;
+  padding-inline: 25px;
+  font-size: clamp(18px, 3vw, 30px);
+}
+.scroller:hover .scroller-track {
   animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(-50%,0,0);
+  }
+}
+.scroller-2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroller-track-2 {
+  display: flex;
+  width: fit-content;
+  animation: marquee2 22s linear infinite;
+  will-change: transform;
+}
+
+.scroller-track-2 span {
+  flex-shrink: 0;
+  padding-inline: 25px;
+  font-size: clamp(18px, 3vw, 30px);
+}
+.scroller-2:hover .scroller-track-2 {
+  animation-play-state: paused;
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translate3d(-50%,0,0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+  }
 }
 .slideLeft {
   animation: slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1);
