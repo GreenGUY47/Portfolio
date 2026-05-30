@@ -4,126 +4,118 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
 
   useEffect(() => {
     const handleClick = (e) => {
       if (!e.target.closest(".navbar")) {
         setOpen(false);
-        setMenuOpen(false);
       }
     };
 
     document.addEventListener("click", handleClick);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
+    return () => document.removeEventListener("click", handleClick);
   }, []);
 
-  return (
-    <div className="sticky top-0 left-0 right-0 z-50">
-      <div className="navbar  flex justify-between p-4 bg-gray-800 w-full text-white shadow-[1px_5px_8px_-3px_rgba(0,0,0,0.5)]      sm:hidden">
-        <h1 className="cursor-default"><b><i>Portfolio</i></b></h1>
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    setOpen(false);
+  };
 
+  const linkClass = (key) =>
+    `px-3 py-2 rounded-xl transition duration-200 ${
+      activeLink === key
+        ? "bg-gray-700 text-white"
+        : "hover:bg-gray-700/60 text-white/90"
+    }`;
+
+  return (
+    <header className="sticky top-0 z-50 w-full">
+      <div className="navbar flex items-center justify-between bg-gray-900 text-white px-4 sm:px-6 md:px-10 lg:px-14 py-4 shadow-lg">
+
+        {/* Logo */}
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold italic tracking-wide cursor-default">
+          Portfolio
+        </h1>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-2 lg:gap-4">
+          <a href="#home" onClick={() => setActiveLink("home")} className={linkClass("home")}>
+            Home
+          </a>
+          <a href="#about" onClick={() => setActiveLink("about")} className={linkClass("about")}>
+            About
+          </a>
+          <a href="#projects" onClick={() => setActiveLink("projects")} className={linkClass("projects")}>
+            Projects
+          </a>
+          <a href="#cv" onClick={() => setActiveLink("cv")} className={linkClass("cv")}>
+            CV
+          </a>
+          <a href="#contact" onClick={() => setActiveLink("contact")} className={linkClass("contact")}>
+            Contact
+          </a>
+        </nav>
+
+        {/* Mobile Button */}
         <button
-          className="cursor-pointer"
-          onClick={() => {
-            setOpen(!open);
-            setMenuOpen(!menuOpen);
-            setActiveLink("home");
-          }}
+          onClick={() => setOpen(!open)}
+          className="md:hidden p-2 rounded-xl hover:bg-gray-700 transition"
         >
           <FontAwesomeIcon
             icon={faBars}
-            className={`
-            hover:bg-gray-700 p-2 rounded-2xl active:bg-gray-700
-            transition-transform duration-300 ease-in
-            ${menuOpen ? "rotate-90 bg-gray-700" : "rotate-0"}`}
+            className={`text-lg transition-transform duration-300 ${
+              open ? "rotate-90" : "rotate-0"
+            }`}
           />
         </button>
       </div>
 
+      {/* Mobile Menu */}
       <div
-        className={` navbar  absolute bg-gray-800 w-30 h-80 text-white flex justify-center items-center right-0 top-14 shadow-[-5px_5px_8px_-3px_rgba(0,0,0,0.5)] rounded-bl-2xl transition-all duration-300 ease-in ${
+        className={`navbar md:hidden absolute top-full left-0 w-full bg-gray-900 text-white shadow-xl transition-all duration-300 ease-in-out ${
           open
             ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-4 pointer-events-none"
-        } md:hidden`}
+            : "opacity-0 -translate-y-3 pointer-events-none"
+        }`}
       >
-        <nav className="flex flex-col items-center gap-6">
-          <ul className="flex flex-col gap-4 text-lg w-full">
+        <nav className="py-3">
+          <ul className="flex flex-col gap-2 px-4">
+
             <li>
-              <a
-                href="#home"
-                onClick={() => {setActiveLink("home")
-                  setOpen(false);
-                    setMenuOpen(false);}
-                }
-                className={`flex w-full p-2 justify-center rounded-2xl transition
-          ${activeLink === "home" ? "bg-gray-700" : "hover:bg-gray-700"}`}
-              >
+              <a href="#home" onClick={() => handleLinkClick("home")} className={linkClass("home") + " block text-center"}>
                 Home
               </a>
             </li>
 
             <li>
-              <a
-                href="#about"
-                onClick={() => {setActiveLink("about")
-                  setOpen(false);
-                    setMenuOpen(false);}
-                }
-                className={`flex w-full p-2 justify-center rounded-2xl transition
-          ${activeLink === "about" ? "bg-gray-700" : "hover:bg-gray-700"}`}
-              >
+              <a href="#about" onClick={() => handleLinkClick("about")} className={linkClass("about") + " block text-center"}>
                 About
               </a>
             </li>
 
             <li>
-              <a
-                href="#projects"
-                onClick={() => {setActiveLink("projects")
-                  setOpen(false);
-                    setMenuOpen(false);}
-                }
-                className={`flex w-full p-2 justify-center rounded-2xl transition
-          ${activeLink === "projects" ? "bg-gray-700" : "hover:bg-gray-700"}`}
-              >
+              <a href="#projects" onClick={() => handleLinkClick("projects")} className={linkClass("projects") + " block text-center"}>
                 Projects
               </a>
             </li>
+
             <li>
-              <a
-                href="#cv"
-                onClick={() => {setActiveLink("cv")
-                  setOpen(false);
-                    setMenuOpen(false);}
-                }
-                className={`flex w-full p-2 justify-center rounded-2xl transition
-          ${activeLink === "cv" ? "bg-gray-700" : "hover:bg-gray-700"}`}
-              >
+              <a href="#cv" onClick={() => handleLinkClick("cv")} className={linkClass("cv") + " block text-center"}>
                 CV
               </a>
             </li>
+
             <li>
-              <a
-                href="#contact"
-                onClick={() => {setActiveLink("contact")
-                  setOpen(false);
-                    setMenuOpen(false);}
-                }
-                className={`flex w-full p-2 justify-center rounded-2xl transition
-          ${activeLink === "contact" ? "bg-gray-700" : "hover:bg-gray-700"}`}
-              >
+              <a href="#contact" onClick={() => handleLinkClick("contact")} className={linkClass("contact") + " block text-center"}>
                 Contact
               </a>
             </li>
+
           </ul>
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

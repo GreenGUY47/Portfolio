@@ -10,12 +10,13 @@ export default function ImgSlider() {
 
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [animClass, setAnimClass] = useState(""); // ✅ control animation via state
+  const [animClass, setAnimClass] = useState("");
   const intervalRef = useRef(null);
-  const imagesRef = useRef(images); // ✅ stable ref, no stale closure
+  const imagesRef = useRef(images);
 
   useEffect(() => {
     let loaded = 0;
+
     imagesRef.current.forEach((src) => {
       const img = new Image();
       img.src = src;
@@ -44,7 +45,6 @@ export default function ImgSlider() {
     return () => stopSlide();
   }, [loading]);
 
-  // ✅ animate first, THEN change index after a short delay
   function prevSlide() {
     setAnimClass("");
     requestAnimationFrame(() => {
@@ -75,6 +75,7 @@ export default function ImgSlider() {
       backdrop-filter: blur(8px);
       z-index: 9998;
     `;
+
     const img = new Image();
     img.src = imagesRef.current[index];
     img.style.cssText = `
@@ -83,26 +84,34 @@ export default function ImgSlider() {
       max-width: 90%; max-height: 90%;
       z-index: 9999; cursor: pointer; border-radius: 20px;
     `;
+
     document.body.style.overflow = "hidden";
     document.body.appendChild(overlay);
     document.body.appendChild(img);
+
     function closeImage() {
       document.body.style.overflow = "auto";
       document.body.removeChild(overlay);
       document.body.removeChild(img);
     }
+
     overlay.onclick = closeImage;
     img.onclick = closeImage;
   }
 
   return (
-    <>
-      <h1 className="text-center bg-white w-full translate-y-5 rounded-3xl text-lg font-bold text-orange-400 p-1">
+    <section className="w-full flex flex-col items-center gap-6 py-6">
+
+      {/* Title */}
+      <h1 className="text-center bg-white w-full max-w-md sm:max-w-lg rounded-3xl text-base sm:text-lg md:text-xl font-bold text-orange-400 p-2 shadow-md">
         My Work
       </h1>
-      <div className="flex flex-col items-center gap-4 scale-80">
+
+      {/* Slider Container */}
+      <div className="flex flex-col items-center gap-5 w-full">
+
         {loading ? (
-          <div className="w-80 h-80 rounded-2xl bg-zinc-800 relative overflow-hidden">
+          <div className="w-[90%] max-w-sm sm:max-w-md md:max-w-lg aspect-square rounded-2xl bg-zinc-800 relative overflow-hidden">
             <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800"></div>
           </div>
         ) : (
@@ -111,28 +120,32 @@ export default function ImgSlider() {
             onClick={fullScreen}
             onMouseEnter={stopSlide}
             onMouseLeave={startSlide}
-            className={`w-80 h-80 object-cover rounded-2xl cursor-pointer ${animClass}`} // ✅ class applied here
+            className={`w-[90%] max-w-sm sm:max-w-md md:max-w-lg aspect-square object-cover rounded-2xl cursor-pointer transition-all duration-300 ${animClass}`}
           />
         )}
-        <div className="flex gap-4">
+
+        {/* Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           <button
             onClick={prevSlide}
             onMouseEnter={stopSlide}
             onMouseLeave={startSlide}
-            className="bg-black text-white px-4 py-2 rounded-xl cursor-pointer"
+            className="bg-black text-white px-4 py-2 sm:px-5 sm:py-2 rounded-xl text-sm sm:text-base hover:bg-gray-800 transition"
           >
             Previous
           </button>
+
           <button
             onClick={nextSlide}
             onMouseEnter={stopSlide}
             onMouseLeave={startSlide}
-            className="bg-black text-white px-4 py-2 rounded-xl cursor-pointer"
+            className="bg-black text-white px-4 py-2 sm:px-5 sm:py-2 rounded-xl text-sm sm:text-base hover:bg-gray-800 transition"
           >
             Next
           </button>
         </div>
+
       </div>
-    </>
+    </section>
   );
 }
