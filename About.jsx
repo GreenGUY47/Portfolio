@@ -101,6 +101,7 @@ function MarqueeRow({ reverse = false, speed = "30s" }) {
         className="flex gap-6 xl:gap-8 2xl:gap-10 w-max"
         style={{
           animation: `marquee${reverse ? "Rev" : ""} ${speed} linear infinite`,
+          
         }}
       >
         {doubled.map((item, i) => (

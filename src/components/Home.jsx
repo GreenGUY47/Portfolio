@@ -63,7 +63,7 @@ function StatCard({ value, label, animate }) {
 function SkillPill({ name, delay }) {
   return (
     <span
-      className="inline-flex items-center px-3 py-1.5 xl:px-4 xl:py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs xl:text-sm 2xl:text-base font-semibold bg-white text-orange-500 shadow-sm hover:scale-105 hover:shadow-md transition-all duration-200 cursor-default"
+      className="inline-flex items-center cursor-pointer px-3 py-1.5 xl:px-4 xl:py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs xl:text-sm 2xl:text-base font-semibold bg-white text-orange-500 shadow-sm hover:scale-105 hover:shadow-md transition-all duration-200 cursor-default"
       style={{ animationDelay: `${delay}ms` }}
     >
       {name}
@@ -132,11 +132,11 @@ const Home = () => {
       </div>
 
       {/* ── Content wrapper ── */}
-      <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 xl:py-16 2xl:py-20">
+      <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 lg:-left-2 xl:px-20 2xl:px-28 py-10 xl:py-16 xl:-left-15 2xl:py-20">
 
         {/* ── GREETING ROW ── */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 xl:mb-14 2xl:mb-18">
-          <h2 className="flex items-center gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold">
+          <h2 className="flex items-center cursor-default gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold">
             Hey there
             <span
               onMouseEnter={handleHover}
@@ -159,7 +159,7 @@ const Home = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 xl:h-3 xl:w-3 bg-green-400" />
             </span>
-            <span className="text-white/90 text-xs xl:text-sm 2xl:text-base font-semibold tracking-wide">
+            <span className="text-white/90 cursor-pointer text-xs xl:text-sm 2xl:text-base font-semibold tracking-wide">
               Available for work
             </span>
           </div>
@@ -173,11 +173,11 @@ const Home = () => {
 
             {/* Name headline */}
             <div className="mb-6 xl:mb-8 2xl:mb-10">
-              <p className="text-white/70 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-3 xl:mb-4">
+              <p className="text-white/70 text-xs cursor-default xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-3 xl:mb-4">
                 Full Stack Developer
               </p>
               <h1 className="flex flex-wrap items-center gap-3 text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-black text-white leading-tight">
-                <span>My name is</span>
+                <span className="cursor-default">My name is</span>
                 <span className="relative w-32 h-14 sm:w-40 sm:h-16 xl:w-52 xl:h-20 2xl:w-64 2xl:h-24 inline-flex items-center">
                   <img
                     src={imgAzam}
@@ -192,14 +192,14 @@ const Home = () => {
             <div className="mb-6 xl:mb-8 2xl:mb-10 relative">
               <div className="relative">
                 <h2
-                  className="font-black text-white leading-[0.9] tracking-tighter select-none"
+                  className="font-black text-white cursor-default leading-[0.9] tracking-tighter select-none"
                   style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
                 >
                   DEVELOPER
                 </h2>
                 {/* Outlined stroke text layered */}
                 <h2
-                  className="font-black leading-[0.9] tracking-tighter select-none absolute top-0 left-0 pointer-events-none"
+                  className="font-black cursor-default leading-[0.9] tracking-tighter select-none absolute top-0 left-0 pointer-events-none"
                   style={{
                     fontSize: "clamp(3.5rem, 10vw, 9rem)",
                     WebkitTextStroke: "2px rgba(255,255,255,0.15)",
@@ -211,7 +211,7 @@ const Home = () => {
                 </h2>
               </div>
               <p
-                className="font-black italic text-right text-white/30 leading-none tracking-tighter mt-1"
+                className="font-black italic text-right text-white/30 cursor-default leading-none tracking-tighter mt-1"
                 style={{ fontSize: "clamp(1.5rem, 4vw, 3.5rem)" }}
               >
                 &amp; DESIGNER
@@ -219,13 +219,13 @@ const Home = () => {
             </div>
 
             {/* Tagline */}
-            <p className="text-white/85 text-sm sm:text-base xl:text-lg 2xl:text-xl leading-relaxed max-w-lg xl:max-w-xl 2xl:max-w-2xl mb-8 xl:mb-10 2xl:mb-12">
+            <p className="text-white/85 cursor-default text-sm sm:text-base xl:text-lg 2xl:text-xl leading-relaxed max-w-lg xl:max-w-xl 2xl:max-w-2xl mb-8 xl:mb-10 2xl:mb-12">
               I build modern, responsive, and scalable web applications with
               clean UI and smooth UX — from concept to deployment.
             </p>
 
             {/* Skill pills */}
-            <div className="flex flex-wrap gap-2 xl:gap-3 mb-10 xl:mb-12 2xl:mb-14">
+            <div className="flex flex-wrap cursor-default gap-2 xl:gap-3 mb-10 xl:mb-12 2xl:mb-14">
               {skills.map((s, i) => (
                 <SkillPill key={s} name={s} delay={i * 60} />
               ))}
@@ -257,11 +257,11 @@ const Home = () => {
             <div className="hidden sm:block bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 max-w-xl xl:max-w-2xl">
               <div className="flex items-center gap-2 mb-3 xl:mb-4">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
-                <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">
+                <span className="text-white/60 cursor-default text-xs xl:text-sm font-semibold uppercase tracking-widest">
                   About
                 </span>
               </div>
-              <p className="text-white/85 text-sm xl:text-base 2xl:text-lg leading-7 xl:leading-8 text-justify">
+              <p className="text-white/85 cursor-pointer text-sm xl:text-base 2xl:text-lg leading-7 xl:leading-8 text-justify">
                 {bio}
               </p>
             </div>
@@ -288,16 +288,16 @@ const Home = () => {
                 {/* Role badge on photo */}
                 <div className="absolute bottom-4 left-4 right-4 xl:bottom-6 xl:left-6 xl:right-6">
                   <div className="bg-black/40 backdrop-blur-md rounded-xl xl:rounded-2xl px-4 py-3 xl:px-5 xl:py-4 border border-white/10">
-                    <p className="text-white font-bold text-sm xl:text-base 2xl:text-lg">Azam</p>
+                    <p className="text-white cursor-default font-bold text-sm xl:text-base 2xl:text-lg">Azam</p>
                     <p className="text-white/70 text-xs xl:text-sm 2xl:text-base">Full Stack Developer & Designer</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating tech badge */}
-              <div className="absolute -top-3 -right-3 xl:-top-4 xl:-right-4 bg-white rounded-xl xl:rounded-2xl shadow-lg px-3 py-2 xl:px-4 xl:py-3 flex items-center gap-2 border border-orange-100">
+              <div className="absolute cursor-pointer -top-3 -right-3 xl:-top-4 xl:-right-4 bg-white rounded-xl xl:rounded-2xl shadow-lg px-3 py-2 xl:px-4 xl:py-3 flex items-center gap-2 border border-orange-100">
                 <div className="w-2 h-2 xl:w-2.5 xl:h-2.5 rounded-full bg-orange-500" />
-                <span className="text-orange-600 font-bold text-xs xl:text-sm whitespace-nowrap">
+                <span className="text-orange-600 cursor-pointer font-bold text-xs xl:text-sm whitespace-nowrap">
                   React & Node.js
                 </span>
               </div>
