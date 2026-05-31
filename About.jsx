@@ -107,7 +107,7 @@ function MarqueeRow({ reverse = false, speed = "30s" }) {
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="flex items-center gap-2 px-4 py-2.5 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 rounded-xl xl:rounded-2xl bg-white/10 border border-white/15 backdrop-blur-sm hover:bg-white/20 transition-colors duration-200 shrink-0"
+            className="flex items-center cursor-pointer gap-2 px-4 py-2.5 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 rounded-xl xl:rounded-2xl bg-white/10 border border-white/15 backdrop-blur-sm hover:bg-white/20 transition-colors duration-200 shrink-0"
           >
             <FontAwesomeIcon
               icon={item.icon}
@@ -155,11 +155,11 @@ const AboutMe = () => {
         {/* ── Section header ── */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
-            <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
+            <p className="text-white/60 text-xs cursor-default xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
               Get to know me
             </p>
             <h1
-              className="font-black text-white leading-none tracking-tighter"
+              className="font-black cursor-default text-white leading-none tracking-tighter"
               style={{ fontSize: "clamp(2.8rem, 7vw, 7rem)" }}
             >
               ABOUT ME
@@ -168,14 +168,14 @@ const AboutMe = () => {
           {/* Decorative pill */}
           <div className="inline-flex items-center gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 w-fit self-start sm:self-auto">
             <span className="w-2 h-2 xl:w-2.5 xl:h-2.5 rounded-full bg-white/70" />
-            <span className="text-white/80 text-xs xl:text-sm font-semibold tracking-wide">
+            <span className="text-white/80 cursor-default text-xs xl:text-sm font-semibold tracking-wide">
               Full Stack Developer & Designer
             </span>
           </div>
         </div>
 
         {/* ── MAIN GRID: bio + timeline ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10 mb-10 xl:mb-14 2xl:mb-18">
+        <div className="grid grid-cols-1 cursor-default lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10 mb-10 xl:mb-14 2xl:mb-18">
 
           {/* Bio — 3 cols */}
           <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
@@ -203,7 +203,7 @@ const AboutMe = () => {
             </div>
 
             {/* Goal card */}
-            <div className="bg-black/20 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 flex gap-4 items-start">
+            <div className="bg-black/20 cursor-default backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 flex gap-4 items-start">
               <div className="shrink-0 w-10 h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 rounded-xl xl:rounded-2xl bg-orange-300/20 border border-orange-300/30 flex items-center justify-center">
                 <FontAwesomeIcon icon={faGraduationCap} className="text-orange-300 text-base xl:text-xl 2xl:text-2xl" />
               </div>
@@ -218,7 +218,7 @@ const AboutMe = () => {
           </div>
 
           {/* Timeline — 2 cols */}
-          <div className="lg:col-span-2 bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
+          <div className=" lg:col-span-2 bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
             <div className="flex items-center gap-2 mb-6 xl:mb-7">
               <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
               <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">Journey</span>
@@ -252,12 +252,12 @@ const AboutMe = () => {
         </div>
 
         {/* ── SERVICES GRID ── */}
-        <div className="mb-12 xl:mb-16 2xl:mb-20">
-          <div className="flex items-center gap-3 mb-6 xl:mb-7 2xl:mb-8">
+        <div className="mb-12  xl:mb-16 2xl:mb-20">
+          <div className="flex cursor-default items-center gap-3 mb-6 xl:mb-7 2xl:mb-8">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
             <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">What I Do</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-5 2xl:gap-6">
+          <div className="grid grid-cols-1 cursor-pointer sm:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-5 2xl:gap-6">
             {services.map((s, i) => (
               <div
                 key={i}
@@ -278,7 +278,7 @@ const AboutMe = () => {
         </div>
 
         {/* ── MARQUEE ROWS ── */}
-        <div className="flex flex-col gap-3 xl:gap-4 2xl:gap-5 -mx-5 sm:-mx-8 lg:-mx-14 xl:-mx-20 2xl:-mx-28 overflow-hidden">
+        <div className="flex flex-col  gap-3 xl:gap-4 2xl:gap-5 -mx-5 sm:-mx-8 lg:-mx-14 xl:-mx-20 2xl:-mx-28 overflow-hidden">
           <MarqueeRow speed="35s" />
           <MarqueeRow reverse speed="28s" />
         </div>
