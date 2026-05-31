@@ -1,112 +1,206 @@
+const stats = [
+  { label: "Experience", value: "2+ yrs" },
+  { label: "Projects", value: "30+" },
+  { label: "Stack", value: "MERN" },
+  { label: "Clients", value: "15+" },
+];
+
+const highlights = [
+  { icon: "💼", text: "Full Stack Developer" },
+  { icon: "⚡", text: "React & Node.js Expert" },
+  { icon: "🎨", text: "UI / UX Designer" },
+  { icon: "🚀", text: "Open to Opportunities" },
+];
+
 const CV = () => {
   return (
-    <section className="w-full min-h-screen bg-orange-400 flex flex-col items-center py-8 px-4 overflow-x-hidden">
+    <section className="relative w-full min-h-screen bg-orange-500 overflow-x-hidden font-sans selection:bg-white/30 flex flex-col">
 
-      {/* Header */}
-      <div className="w-full max-w-2xl flex flex-col items-center gap-2">
-        <span className="text-white/70 text-xs uppercase tracking-[0.3em] font-medium">
-          Portfolio
-        </span>
-
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight text-center">
-          Azam's <span className="italic font-light opacity-80">Résumé</span>
-        </h1>
-
-        <div className="w-12 h-[2px] bg-white/40 rounded-full mt-1" />
+      {/* ── Background geometry ── */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-28 -right-28 w-[460px] h-[460px] xl:w-[650px] xl:h-[650px] 2xl:w-[860px] 2xl:h-[860px] rounded-full bg-orange-400/45" />
+        <div className="absolute -bottom-20 -left-20 w-64 h-64 xl:w-96 xl:h-96 2xl:w-[500px] 2xl:h-[500px] rounded-full bg-amber-400/25" />
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
       </div>
 
-      {/* CV Card */}
-      <div className="w-full max-w-2xl flex-1 flex items-center justify-center my-8">
+      <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto w-full px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-14 xl:py-20 2xl:py-28 flex flex-col flex-1">
 
-        <div className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-4 sm:p-6 shadow-2xl">
-
-          {/* Card header */}
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <p className="text-white/60 text-xs uppercase tracking-widest">
-                Document
-              </p>
-              <p className="text-white font-semibold text-sm mt-0.5">
-                Curriculum Vitae — 2025
-              </p>
-            </div>
-
-            <span className="bg-green-400/20 text-green-300 text-xs font-medium px-3 py-1 rounded-full border border-green-400/30">
-              ● Available
+        {/* ── Section header ── */}
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
+          <div>
+            <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
+              Portfolio
+            </p>
+            <h1
+              className="font-black text-white leading-none tracking-tighter"
+              style={{ fontSize: "clamp(2.8rem, 7vw, 7rem)" }}
+            >
+              RÉSUMÉ
+            </h1>
+          </div>
+          {/* Available badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 w-fit self-start sm:self-auto">
+            <span className="relative flex h-2 w-2 xl:h-2.5 xl:w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 xl:h-2.5 xl:w-2.5 bg-green-400" />
+            </span>
+            <span className="text-white/80 text-xs xl:text-sm font-semibold tracking-wide">
+              Available for Work
             </span>
           </div>
+        </div>
 
-          {/* CV Image Link (FIXED) */}
-          <a
-            href="/CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full group"
-          >
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 group-hover:border-white/30 transition">
+        {/* ── MAIN CONTENT ── */}
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10 items-start">
 
-              <img
-                src="/CV.png"
-                alt="Azam CV"
-                className="w-full h-auto object-cover group-hover:scale-[1.03] transition duration-500"
-              />
+          {/* LEFT — CV preview card (3 cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 bg-white text-orange-500 font-bold text-sm px-4 py-2 rounded-xl transition">
-                  View CV ↗
+            {/* Document label row */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
+                <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">
+                  Curriculum Vitae — 2025
                 </span>
               </div>
-
+              <span className="bg-green-400/15 text-green-300 text-xs xl:text-sm font-semibold px-3 py-1 xl:px-4 xl:py-1.5 rounded-full border border-green-400/25">
+                PDF Ready
+              </span>
             </div>
-          </a>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-5">
-            {[
-              { label: "Experience", value: "2+ yrs" },
-              { label: "Projects", value: "10+" },
-              { label: "Stack", value: "MERN" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white/10 border border-white/10 rounded-xl px-2 py-3 text-center"
+            {/* CV image preview */}
+            <div className="relative group">
+              {/* Decorative ring */}
+              <div className="absolute -inset-2 xl:-inset-3 rounded-[2rem] xl:rounded-[2.5rem] bg-white/10 border border-white/15 -z-10" />
+
+              <a
+                href="/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                <p className="text-white font-bold text-base sm:text-lg">
-                  {stat.value}
-                </p>
-                <p className="text-white/50 text-[10px] sm:text-xs uppercase">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+                <div className="relative overflow-hidden rounded-2xl xl:rounded-3xl border border-white/15 shadow-2xl">
+                  <img
+                    src="/CV.png"
+                    alt="Azam — Curriculum Vitae"
+                    className="w-full h-auto object-cover group-hover:scale-[1.025] transition-transform duration-500"
+                  />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 flex items-center gap-2 bg-white text-orange-500 font-bold text-sm xl:text-base 2xl:text-lg px-5 py-2.5 xl:px-7 xl:py-3.5 rounded-xl xl:rounded-2xl shadow-xl">
+                      <svg className="w-4 h-4 xl:w-5 xl:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Open Full CV
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 xl:gap-4">
+              <a
+                href="/CV.pdf"
+                download
+                className="flex-1 flex items-center justify-center gap-2 xl:gap-3 bg-white text-orange-500 font-bold py-3.5 xl:py-4 2xl:py-5 rounded-xl xl:rounded-2xl hover:scale-[1.02] hover:shadow-xl transition-all duration-200 text-sm xl:text-base 2xl:text-lg"
+              >
+                <svg className="w-4 h-4 xl:w-5 xl:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download CV
+              </a>
+              <a
+                href="/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 xl:gap-3 bg-white/10 backdrop-blur-md border border-white/25 text-white font-bold py-3.5 xl:py-4 2xl:py-5 rounded-xl xl:rounded-2xl hover:bg-white/20 hover:scale-[1.02] transition-all duration-200 text-sm xl:text-base 2xl:text-lg"
+              >
+                <svg className="w-4 h-4 xl:w-5 xl:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                View in Browser
+              </a>
+            </div>
           </div>
 
+          {/* RIGHT — Stats + highlights (2 cols) */}
+          <div className="lg:col-span-2 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
+
+            {/* Stats grid */}
+            <div className="bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
+              <div className="flex items-center gap-2 mb-5 xl:mb-6">
+                <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
+                <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">
+                  By the Numbers
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-3 xl:gap-4">
+                {stats.map((s) => (
+                  <div
+                    key={s.label}
+                    className="group flex flex-col items-center justify-center py-4 xl:py-5 2xl:py-6 px-3 rounded-xl xl:rounded-2xl bg-white/10 border border-white/10 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <span className="text-2xl xl:text-3xl 2xl:text-4xl font-black text-white tracking-tight">
+                      {s.value}
+                    </span>
+                    <span className="text-white/55 text-[10px] xl:text-xs 2xl:text-sm uppercase tracking-widest mt-1 font-semibold">
+                      {s.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Highlights list */}
+            <div className="bg-black/20 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
+              <div className="flex items-center gap-2 mb-5 xl:mb-6">
+                <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
+                <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">
+                  Highlights
+                </span>
+              </div>
+              <div className="flex flex-col gap-2.5 xl:gap-3 2xl:gap-4">
+                {highlights.map((h, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 xl:gap-4 px-4 py-3 xl:px-5 xl:py-3.5 2xl:px-6 2xl:py-4 rounded-xl xl:rounded-2xl bg-white/10 border border-white/10 hover:bg-white/15 hover:translate-x-1 transition-all duration-200"
+                  >
+                    <span className="text-lg xl:text-xl 2xl:text-2xl">{h.icon}</span>
+                    <span className="text-white font-semibold text-sm xl:text-base 2xl:text-lg">
+                      {h.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick note */}
+            <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-6 2xl:p-7 flex gap-3 xl:gap-4 items-start">
+              <div className="shrink-0 w-8 h-8 xl:w-10 xl:h-10 rounded-xl bg-white/15 flex items-center justify-center text-base xl:text-lg">
+                ✉️
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm xl:text-base 2xl:text-lg mb-1">
+                  Let's collaborate
+                </p>
+                <p className="text-white/65 text-xs xl:text-sm 2xl:text-base leading-relaxed">
+                  Open to freelance projects, full-time roles, and exciting opportunities worldwide.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-
-      {/* Buttons */}
-      <div className="w-full max-w-2xl flex flex-col sm:flex-row gap-3">
-
-        <a
-          href="/CV.pdf"
-          download
-          className="flex-1 flex items-center justify-center gap-2 bg-white text-orange-500 font-bold py-3 rounded-2xl hover:bg-orange-50 transition text-sm"
-        >
-          Download CV
-        </a>
-
-        <a
-          href="/CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white font-semibold py-3 rounded-2xl hover:bg-white/20 transition text-sm"
-        >
-          Open CV
-        </a>
 
       </div>
-
     </section>
   );
 };
