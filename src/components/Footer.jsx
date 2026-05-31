@@ -1,6 +1,3 @@
-import { Player } from "@lordicon/react";
-import heartIcon from "../assets/heart.json";
-
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -257,12 +254,8 @@ const Footer = () => {
         <div className="pt-6 xl:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 xl:gap-4">
           <p className="text-white text-xs flex xl:text-sm 2xl:text-base text-center sm:text-left">
             © {year} Azam. Built with React, Tailwind CSS &{" "}
-            <span className="inline-block pl-2.5 cursor-pointer">
- <Player
-  icon={heartIcon}
-  size={40}
-  trigger="loop"
-/>
+            <span className="inline-block pl-2.5 scale-200 cursor-pointer">
+              💞
             </span>
           </p>
           <div className="flex items-center gap-4 xl:gap-5">
