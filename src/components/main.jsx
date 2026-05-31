@@ -1,13 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import '/src/index.css'
-import Navbar from './Navbar'
-import Home from './Home'
-import AboutMe from '../../About'
-import Projects from './Projects'
-import CV from './CV'
-import Contact from './Contact'
-import Footer from './Footer'
+import Navbar from './Navbar.jsx'
+import Home from './Home.jsx'
+import AboutMe from './About.jsx'
+import Projects from './Projects.jsx'
+import CV from './CV.jsx'
+import Contact from './Contact.jsx'
+import Footer from './Footer.jsx'
 
 
 createRoot(document.getElementById('root')).render(
