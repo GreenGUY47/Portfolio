@@ -1,4 +1,3 @@
-import { Player } from "@lordicon/react";
 const navLinks = [
   { label: "Home",     href: "#home" },
   { label: "About",    href: "#about" },
@@ -104,16 +103,16 @@ const Footer = () => {
             {/* Social icons */}
             <div className="flex gap-2 xl:gap-3 flex-wrap mt-1">
               {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target={s.href.startsWith("http") ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-9 h-9 xl:w-11 xl:h-11 2xl:w-13 2xl:h-13 rounded-xl xl:rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 hover:-translate-y-0.5 hover:border-white/30 transition-all duration-200"
-                >
-                  {s.icon}
-                </a>
+               <a
+  key={s.label}
+  href={s.href}
+  target={s.href.startsWith("http") ? "_blank" : undefined}
+  rel="noopener noreferrer"
+  aria-label={s.label}
+  className="w-9 h-9 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 rounded-xl xl:rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 hover:-translate-y-0.5 hover:border-white/30 transition-all duration-200"
+>
+  {s.icon}
+</a>
               ))}
             </div>
           </div>
@@ -210,7 +209,11 @@ const Footer = () => {
         {/* ── BOTTOM BAR ── */}
         <div className="pt-6 xl:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 xl:gap-4">
           <p className="text-white text-xs flex xl:text-sm 2xl:text-base text-center sm:text-left">
-            © {year} Azam. Built with React, Tailwind CSS &  <span className="inline-block pl-2.5 scale-200 cursor-pointer"> <img src="/public/heart.svg" alt="Heart" className="w-4 h-4 hover:scale-125 transition-all duration-150" /></span>
+            © {year} Azam. Built with React, Tailwind CSS &  <span className="inline-block pl-2.5 scale-200 cursor-pointer"> <img
+  src="/heart.svg"
+  alt="Heart"
+  className="w-4 h-4 hover:scale-125 transition-all duration-150"
+/> </span>
           </p>
           <div className="flex items-center gap-4 xl:gap-5">
             <span className="text-white/30 text-xs xl:text-sm">
