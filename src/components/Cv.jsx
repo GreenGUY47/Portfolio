@@ -1,8 +1,8 @@
 const stats = [
   { label: "Experience", value: "2+ yrs" },
-  { label: "Projects", value: "30+" },
+  { label: "Projects", value: "10+" },
   { label: "Stack", value: "MERN" },
-  { label: "Clients", value: "15+" },
+  { label: "Clients", value: "8+" },
 ];
 
 const highlights = [
@@ -34,11 +34,11 @@ const CV = () => {
         {/* ── Section header ── */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
-            <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
+            <p className="text-white/60 cursor-default text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
               Portfolio
             </p>
             <h1
-              className="font-black text-white leading-none tracking-tighter"
+              className="font-black cursor-pointer text-white leading-none tracking-tighter"
               style={{ fontSize: "clamp(2.8rem, 7vw, 7rem)" }}
             >
               RÉSUMÉ
@@ -50,7 +50,7 @@ const CV = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 xl:h-2.5 xl:w-2.5 bg-green-400" />
             </span>
-            <span className="text-white/80 text-xs xl:text-sm font-semibold tracking-wide">
+            <span className="text-white/80 cursor-default text-xs xl:text-sm font-semibold tracking-wide">
               Available for Work
             </span>
           </div>
@@ -66,11 +66,11 @@ const CV = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
-                <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">
+                <span className="text-white/60 cursor-default text-xs xl:text-sm font-semibold uppercase tracking-widest">
                   Curriculum Vitae — 2025
                 </span>
               </div>
-              <span className="bg-green-400/15 text-green-300 text-xs xl:text-sm font-semibold px-3 py-1 xl:px-4 xl:py-1.5 rounded-full border border-green-400/25">
+              <span className="bg-green-400/15 cursor-pointer text-green-300 text-xs xl:text-sm font-semibold px-3 py-1 xl:px-4 xl:py-1.5 rounded-full border border-green-400/25">
                 PDF Ready
               </span>
             </div>
@@ -132,7 +132,7 @@ const CV = () => {
           </div>
 
           {/* RIGHT — Stats + highlights (2 cols) */}
-          <div className="lg:col-span-2 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
+          <div className="lg:col-span-2 cursor-pointer flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
             {/* Stats grid */}
             <div className="bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
