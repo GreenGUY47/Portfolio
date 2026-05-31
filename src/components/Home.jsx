@@ -14,9 +14,9 @@ architecture on the inside, and a visually refined interface on the outside.`;
 /* ─── Stats ──────────────────────────────────────────────────── */
 const stats = [
   { value: "2+", label: "Years Experience" },
-  { value: "30+", label: "Projects Shipped" },
-  { value: "15+", label: "Happy Clients" },
-  { value: "99%", label: "Satisfaction Rate" },
+  { value: "10+", label: "Projects Shipped" },
+  { value: "8+", label: "Happy Clients" },
+  { value: "89%", label: "Satisfaction Rate" },
 ];
 
 /* ─── Skills ─────────────────────────────────────────────────── */

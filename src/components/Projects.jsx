@@ -213,20 +213,20 @@ const Projects = () => {
         {/* ── Section header ── */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
-            <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
+            <p className="text-white/60 cursor-default text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
               My work
             </p>
             <h1
-              className="font-black text-white leading-none tracking-tighter"
+              className="font-black text-white cursor-default leading-none tracking-tighter"
               style={{ fontSize: "clamp(2.8rem, 7vw, 7rem)" }}
             >
               PROJECTS
             </h1>
           </div>
-          <div className="inline-flex items-center gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 w-fit self-start sm:self-auto">
+          <div className="inline-flex items-center cursor-default gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 w-fit self-start sm:self-auto">
             <span className="w-2 h-2 xl:w-2.5 xl:h-2.5 rounded-full bg-white/70" />
             <span className="text-white/80 text-xs xl:text-sm font-semibold tracking-wide">
-              30+ Projects Shipped
+              10+ Projects Shipped
             </span>
           </div>
         </div>
