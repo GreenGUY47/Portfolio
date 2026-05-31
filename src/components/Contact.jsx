@@ -62,7 +62,7 @@ const Contact = () => {
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-14 xl:py-20 2xl:py-28">
 
         {/* ── Section header ── */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
+        <div className="flex flex-col cursor-default sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
             <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
               Let's talk
@@ -92,7 +92,7 @@ const Contact = () => {
         </div>
 
         {/* ── MAIN GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10">
+        <div className="grid grid-cols-1 cursor-default lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10">
 
           {/* LEFT — contact methods (3 cols) */}
           <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
@@ -258,7 +258,7 @@ const Contact = () => {
               </p>
               <a
                 href="mailto:thegreenguy48@gmail.com"
-                className="inline-flex items-center justify-center gap-2 bg-white text-orange-500 font-bold text-sm xl:text-base py-3 xl:py-3.5 px-5 rounded-xl xl:rounded-2xl hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-white text-orange-500 font-bold text-sm xl:text-base py-3 xl:py-3.5 px-5 rounded-xl xl:rounded-2xl hover:scale-[1.02] hover:shadow-lg transition-all duration-350 hover:bg-orange-500 hover:text-white hover:border-white border-2 border-white"
               >
                 Send a Message
                 <svg className="w-4 h-4 xl:w-5 xl:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

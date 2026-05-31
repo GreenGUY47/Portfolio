@@ -1,3 +1,4 @@
+import { Player } from "@lordicon/react";
 const navLinks = [
   { label: "Home",     href: "#home" },
   { label: "About",    href: "#about" },
@@ -51,7 +52,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full bg-orange-500 overflow-hidden font-sans">
+    <footer className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans">
 
       {/* ── Top divider wave ── */}
       <div className="w-full overflow-hidden leading-none">
@@ -154,7 +155,7 @@ const Footer = () => {
               {stack.map((s) => (
                 <span
                   key={s}
-                  className="px-3 py-1.5 xl:px-4 xl:py-2 rounded-full bg-white/10 border border-white/15 text-white/75 text-xs xl:text-sm font-semibold hover:bg-white/20 hover:text-white transition-all duration-150 cursor-default"
+                  className="px-3 cursor-pointer py-1.5 xl:px-4 xl:py-2 rounded-full bg-white/10 border border-white/15 text-white/75 text-xs xl:text-sm font-semibold hover:bg-white/20 hover:text-white transition-all duration-150 "
                 >
                   {s}
                 </span>
@@ -208,8 +209,8 @@ const Footer = () => {
 
         {/* ── BOTTOM BAR ── */}
         <div className="pt-6 xl:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 xl:gap-4">
-          <p className="text-white/45 text-xs xl:text-sm 2xl:text-base text-center sm:text-left">
-            © {year} Azam. Built with React, Tailwind CSS & ❤️
+          <p className="text-white text-xs flex xl:text-sm 2xl:text-base text-center sm:text-left">
+            © {year} Azam. Built with React, Tailwind CSS &  <span className="inline-block pl-2.5 scale-200 cursor-pointer"> <img src="/public/heart.svg" alt="Heart" className="w-4 h-4 hover:scale-125 transition-all duration-150" /></span>
           </p>
           <div className="flex items-center gap-4 xl:gap-5">
             <span className="text-white/30 text-xs xl:text-sm">
