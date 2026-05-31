@@ -236,7 +236,7 @@ const Projects = () => {
           {/* Label */}
           <div className="flex items-center gap-3 mb-5 xl:mb-6 2xl:mb-7">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
-            <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">Video Portfolio</span>
+            <span className="text-white/60 cursor-default text-xs xl:text-sm font-semibold uppercase tracking-widest">Video Portfolio</span>
           </div>
 
           <div className="relative w-full max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">
@@ -244,7 +244,7 @@ const Projects = () => {
             <div className="absolute -inset-2 xl:-inset-3 rounded-[2rem] xl:rounded-[2.5rem] bg-white/10 border border-white/15 -z-10" />
 
             {videoReady ? (
-              <div className="w-full aspect-video bg-black rounded-2xl xl:rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+              <div className="w-full aspect-video cursor-pointer bg-black rounded-2xl xl:rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                 <video
                   controls
                   className="w-full h-full object-contain"
@@ -271,9 +271,9 @@ const Projects = () => {
         <div>
           <div className="flex items-center gap-3 mb-6 xl:mb-8 2xl:mb-10">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
-            <span className="text-white/60 text-xs xl:text-sm font-semibold uppercase tracking-widest">Screenshot Gallery</span>
+            <span className="text-white/60 cursor-default text-xs xl:text-sm font-semibold uppercase tracking-widest">Screenshot Gallery</span>
             <div className="flex-1 h-px bg-white/10" />
-            <span className="text-white/40 text-xs xl:text-sm font-medium">Hover to pause · Click to expand</span>
+            <span className="text-white/40 cursor-default text-xs xl:text-sm font-medium">Hover to pause · Click to expand</span>
           </div>
 
           <ImgSlider />
