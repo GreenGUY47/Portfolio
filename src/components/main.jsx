@@ -37,7 +37,7 @@ createRoot(document.getElementById('root')).render(
     <footer>
       <Footer />
     </footer>
-    <Analytics />
+<Analytics />
     </div>
   </StrictMode>
 )
