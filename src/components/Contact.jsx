@@ -2,8 +2,8 @@
 const socials = [
   {
     label: "GitHub",
-    handle: "@azam-dev",
-    href: "https://github.com/",
+    handle: "Azam-GreenGUY47",
+    href: "https://github.com/GreenGUY47",
     bg: "bg-white/10 border-white/15",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 xl:w-6 xl:h-6 text-white">
@@ -14,7 +14,7 @@ const socials = [
   {
     label: "LinkedIn",
     handle: "Azam Dev",
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/azam-dev",
     bg: "bg-blue-400/10 border-blue-400/20",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 xl:w-6 xl:h-6 text-blue-300">
@@ -24,8 +24,8 @@ const socials = [
   },
   {
     label: "Instagram",
-    handle: "@azam.dev",
-    href: "https://instagram.com/",
+    handle: "@azam249",
+    href: "https://www.instagram.com/m.azam249?igsh=MTkxbTBkODZxcm04dw==",
     bg: "bg-pink-400/10 border-pink-400/20",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 xl:w-6 xl:h-6 text-pink-300">
