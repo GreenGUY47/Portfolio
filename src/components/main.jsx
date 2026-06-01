@@ -5,7 +5,7 @@ import Navbar from './Navbar.jsx'
 import Home from './Home.jsx'
 import AboutMe from './About.jsx'
 import Projects from './Projects.jsx'
-import CV from "./CV.jsx";
+import CV from "./CVPORTFOLIO.jsx";
 import Contact from './Contact.jsx'
 import Footer from './Footer.jsx'
 
