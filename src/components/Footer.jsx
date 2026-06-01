@@ -9,7 +9,7 @@ const navLinks = [
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/GreenGUY47",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -22,7 +22,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/azam-dev",
     icon: (
       <svg
         viewBox="0 0 24 24"
