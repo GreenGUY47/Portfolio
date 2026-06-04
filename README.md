@@ -37,7 +37,6 @@ JavaScript ES6+ HTML5         CSS3
 ## ✨ Features
 
 - **Responsive design** — fluid across mobile, tablet, and desktop
-- **Dark / Light mode** — system preference aware with manual toggle
 - **Smooth animations** — transitions and scroll-triggered effects
 - **Project showcase** — filterable cards with live demo & source links
 - **Skills section** — visual representation of tools and technologies
@@ -57,10 +56,10 @@ JavaScript ES6+ HTML5         CSS3
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/GreenGUY47/Portfolio
 
 # 2. Move into the project directory
-cd your-repository
+cd Portfolio
 
 # 3. Install dependencies
 npm install
@@ -69,7 +68,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173/](http://localhost:5173/) in your browser.
 
 ### Build for Production
 
@@ -121,10 +120,9 @@ This portfolio can be deployed to any static hosting platform:
 
 Have a project in mind or just want to say hi?
 
-- 🌐 **Portfolio:** [your-portfolio-url.com](https://your-portfolio-url.com)
-- 💼 **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- 🐙 **GitHub:** [github.com/your-username](https://github.com/your-username)
-- 📧 **Email:** your@email.com
+- 🌐 **Portfolio:** [azamdevx.vercel.app](https://azamdevx.vercel.app/)
+- 🐙 **GitHub:** [github.com/GreenGUY47](https://github.com/GreenGUY47)
+- 📧 **Email:** thegreenguy47@gmail.com
 
 ---
 
