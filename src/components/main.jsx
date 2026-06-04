@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Analytics } from '@vercel/analytics/react'
 import '/src/index.css'
 import "@fontsource/ruslan-display";
 import Navbar from './Navbar.jsx'
@@ -37,6 +38,7 @@ createRoot(document.getElementById('root')).render(
     <footer>
       <Footer />
     </footer>
+    <Analytics />
     </div>
   </StrictMode>
 )
