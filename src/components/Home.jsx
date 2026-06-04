@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Player } from "@lordicon/react";
 import hand from "../assets/hand.json";
-import imgAzam from "../assets/AZAM.png";
 import ownerImg from "../assets/Demo.jpg";
 
 /* ─── Bio copy ───────────────────────────────────────────────── */
@@ -20,7 +19,16 @@ const stats = [
 ];
 
 /* ─── Skills ─────────────────────────────────────────────────── */
-const skills = ["React", "Node.js", "MongoDB", "TypeScript", "Tailwind", "Express", "Next.js", "Figma"];
+const skills = [
+  "React",
+  "Node.js",
+  "MongoDB",
+  "TypeScript",
+  "Tailwind",
+  "Express",
+  "Next.js",
+  "Figma",
+];
 
 /* ─── Animated counter hook ──────────────────────────────────── */
 function useCountUp(target, duration = 1200, start = false) {
@@ -82,8 +90,10 @@ const Home = () => {
   /* Intersection observer for stat counters */
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setStatsVisible(true); },
-      { threshold: 0.3 }
+      ([entry]) => {
+        if (entry.isIntersecting) setStatsVisible(true);
+      },
+      { threshold: 0.3 },
     );
     if (statsRef.current) observer.observe(statsRef.current);
     return () => observer.disconnect();
@@ -105,7 +115,6 @@ const Home = () => {
 
   return (
     <section className="relative w-full min-h-screen bg-orange-500 overflow-x-hidden font-sans selection:bg-white/30">
-
       {/* ── Decorative background geometry ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {/* Large circle top-right */}
@@ -133,7 +142,6 @@ const Home = () => {
 
       {/* ── Content wrapper ── */}
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 lg:-left-2 xl:px-20 2xl:px-28 py-10 xl:py-16 xl:-left-15 2xl:py-20">
-
         {/* ── GREETING ROW ── */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 xl:mb-14 2xl:mb-18">
           <h2 className="flex items-center cursor-default gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold">
@@ -167,10 +175,8 @@ const Home = () => {
 
         {/* ── HERO: Name + Image ── */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 xl:gap-16 2xl:gap-24">
-
           {/* LEFT */}
           <div className="flex-1 w-full order-2 lg:order-1">
-
             {/* Name headline */}
             <div className="mb-6 xl:mb-8 2xl:mb-10">
               <p className="text-white/70 text-xs cursor-default xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-3 xl:mb-4">
@@ -178,12 +184,11 @@ const Home = () => {
               </p>
               <h1 className="flex flex-wrap items-center gap-3 text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-black text-white leading-tight">
                 <span className="cursor-default">My name is</span>
-                <span className="relative w-32 h-14 sm:w-40 sm:h-16 xl:w-52 xl:h-20 2xl:w-64 2xl:h-24 inline-flex items-center">
-                  <img
-                    src={imgAzam}
-                    alt="Azam"
-                    className="w-full h-full object-contain drop-shadow-lg animate-pulse"
-                  />
+                <span className="relative w-50 justify-center pt-2 h-14 sm:w-64
+                `sm:h-16 xl:w-80 xl:h-20 2xl:w-110 2xl:h-24 inline-flex items-center bg-amber-50 rounded-lg">
+                  <h1 class="font-ruslan text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 animate-gradient-x cursor-default">
+                    Azam
+                  </h1>
                 </span>
               </h1>
             </div>
@@ -240,9 +245,16 @@ const Home = () => {
                 View My Work
                 <svg
                   className="w-4 h-4 xl:w-5 xl:h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </a>
               <a
@@ -288,8 +300,12 @@ const Home = () => {
                 {/* Role badge on photo */}
                 <div className="absolute bottom-4 left-4 right-4 xl:bottom-6 xl:left-6 xl:right-6">
                   <div className="bg-black/40 backdrop-blur-md rounded-xl xl:rounded-2xl px-4 py-3 xl:px-5 xl:py-4 border border-white/10">
-                    <p className="text-white cursor-default font-bold text-sm xl:text-base 2xl:text-lg">Azam</p>
-                    <p className="text-white/70 text-xs xl:text-sm 2xl:text-base">Full Stack Developer & Designer</p>
+                    <p className="text-white cursor-default font-bold text-sm xl:text-base 2xl:text-lg">
+                      Azam
+                    </p>
+                    <p className="text-white/70 text-xs xl:text-sm 2xl:text-base">
+                      Full Stack Developer & Designer
+                    </p>
                   </div>
                 </div>
               </div>
@@ -309,7 +325,9 @@ const Home = () => {
         <div className="mt-8 sm:hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-5 bg-white rounded-full" />
-            <span className="text-white/60 text-xs font-semibold uppercase tracking-widest">About</span>
+            <span className="text-white/60 text-xs font-semibold uppercase tracking-widest">
+              About
+            </span>
           </div>
           <p className="text-white/85 text-sm leading-7 text-justify">{bio}</p>
         </div>
@@ -320,13 +338,20 @@ const Home = () => {
           className="mt-14 xl:mt-20 2xl:mt-28 grid grid-cols-2 sm:grid-cols-4 gap-3 xl:gap-4 2xl:gap-6"
         >
           {stats.map((s) => (
-            <StatCard key={s.label} value={s.value} label={s.label} animate={statsVisible} />
+            <StatCard
+              key={s.label}
+              value={s.value}
+              label={s.label}
+              animate={statsVisible}
+            />
           ))}
         </div>
 
         {/* ── SCROLL HINT ── */}
         <div className="mt-14 xl:mt-20 2xl:mt-24 flex flex-col items-center gap-2 opacity-50">
-          <p className="text-white text-xs xl:text-sm uppercase tracking-[0.2em] font-medium">Scroll to explore</p>
+          <p className="text-white text-xs xl:text-sm uppercase tracking-[0.2em] font-medium">
+            Scroll to explore
+          </p>
           <div className="w-5 h-8 xl:w-6 xl:h-10 rounded-full border-2 border-white/40 flex items-start justify-center pt-1.5">
             <div className="w-1 h-2 xl:w-1.5 xl:h-2.5 bg-white/70 rounded-full animate-bounce" />
           </div>

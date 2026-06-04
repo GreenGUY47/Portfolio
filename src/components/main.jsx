@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import '/src/index.css'
+import "@fontsource/ruslan-display";
 import Navbar from './Navbar.jsx'
 import Home from './Home.jsx'
 import AboutMe from './About.jsx'
