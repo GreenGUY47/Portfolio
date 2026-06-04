@@ -280,7 +280,7 @@ const Home = () => {
                   src={ownerImg}
                   alt="Azam — Full Stack Developer"
                   className="w-full h-full object-cover object-top"
-                  style={{ transform: `translateY(${scrollY * 0.04}px)` }}
+                  style={{ filter: "brightness(0.95)" }}
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
