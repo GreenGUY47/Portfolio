@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import ThemeToggle from './ThemeToggle.jsx';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
@@ -13,8 +13,8 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
   const handleLinkClick = (link) => {
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="navbar flex items-center justify-between bg-gray-900 text-white px-4 sm:px-6 md:px-10 lg:px-14 py-4 shadow-lg">
+      <div className="navbar flex items-center justify-between bg-gray-900 text-white px-4 sm:px-6 md:px-10 lg:px-14 py-4 shadow-lg dark:bg-gray-800">
 
         {/* Logo */}
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold italic tracking-wide cursor-default">
@@ -55,6 +55,7 @@ const Navbar = () => {
           <a href="#contact" onClick={() => setActiveLink("contact")} className={linkClass("contact")}>
             Contact
           </a>
+            <ThemeToggle />
         </nav>
 
         {/* Mobile Button */}

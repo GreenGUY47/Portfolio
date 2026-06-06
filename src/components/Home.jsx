@@ -114,17 +114,17 @@ const Home = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-orange-500 overflow-x-hidden font-sans selection:bg-white/30">
+    <section className="relative w-full min-h-screen bg-orange-500 text-white overflow-x-hidden font-sans selection:bg-white/30 dark:bg-slate-900 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
       {/* ── Decorative background geometry ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {/* Large circle top-right */}
         <div
-          className="absolute -top-24 -right-24 w-[480px] h-[480px] xl:w-[700px] xl:h-[700px] 2xl:w-[900px] 2xl:h-[900px] rounded-full bg-orange-400/50"
+          className="absolute -top-24 -right-24 w-[480px] h-[480px] xl:w-[700px] xl:h-[700px] 2xl:w-[900px] 2xl:h-[900px] rounded-full bg-orange-400/50 dark:bg-slate-800/50"
           style={{ transform: `translateY(${scrollY * 0.08}px)` }}
         />
         {/* Small accent circle bottom-left */}
         <div
-          className="absolute -bottom-16 -left-16 w-64 h-64 xl:w-96 xl:h-96 2xl:w-[480px] 2xl:h-[480px] rounded-full bg-amber-400/30"
+          className="absolute -bottom-16 -left-16 w-64 h-64 xl:w-96 xl:h-96 2xl:w-[480px] 2xl:h-[480px] rounded-full bg-amber-400/30 dark:bg-slate-800/50"
           style={{ transform: `translateY(${-scrollY * 0.05}px)` }}
         />
         {/* Horizontal rule accent */}
@@ -144,7 +144,7 @@ const Home = () => {
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 lg:-left-2 xl:px-20 2xl:px-28 py-10 xl:py-16 xl:-left-15 2xl:py-20">
         {/* ── GREETING ROW ── */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 xl:mb-14 2xl:mb-18">
-          <h2 className="flex items-center cursor-default gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold">
+          <h2 className="flex items-center cursor-default gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold dark:text-white/90">
             Hey there
             <span
               onMouseEnter={handleHover}
