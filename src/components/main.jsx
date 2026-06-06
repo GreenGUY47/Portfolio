@@ -11,7 +11,6 @@ import CV from "./CVPORTFOLIO.jsx";
 import Contact from './Contact.jsx'
 import Footer from './Footer.jsx'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='flex flex-col gap-0 w-screen h-screen'>
