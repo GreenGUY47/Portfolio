@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Player } from "@lordicon/react";
 import hand from "../assets/hand.json";
-import ownerImg from "../assets/Demo.jpg";
+import ownerImg from "../assets/Owner.png";
 
 /* ─── Bio copy ───────────────────────────────────────────────── */
 const bio = `I build digital experiences where design meets performance and ideas
