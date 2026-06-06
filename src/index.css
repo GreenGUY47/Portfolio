@@ -108,3 +108,8 @@ html {
     filter: blur(6px);
   }
 }
+@import "tailwindcss";
+
+@theme {
+  --font-ruslan: "Ruslan Display", serif;
+}
