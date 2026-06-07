@@ -71,7 +71,7 @@ function StatCard({ value, label, animate }) {
 function SkillPill({ name, delay }) {
   return (
     <span
-      className="inline-flex items-center cursor-pointer px-3 py-1.5 xl:px-4 xl:py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs xl:text-sm 2xl:text-base font-semibold bg-white text-orange-500 shadow-sm hover:scale-105 hover:shadow-md transition-all duration-200 cursor-default"
+      className="inline-flex items-center cursor-pointer px-3 py-1.5 xl:px-4 xl:py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs xl:text-sm 2xl:text-base font-semibold bg-white text-orange-500 shadow-sm hover:scale-105 hover:shadow-md transition-all duration-200 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600"
       style={{ animationDelay: `${delay}ms` }}
     >
       {name}
@@ -184,9 +184,8 @@ const Home = () => {
               </p>
               <h1 className="flex flex-wrap items-center gap-3 text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl font-black text-white leading-tight">
                 <span className="cursor-default">My name is</span>
-                <span className="relative w-50 justify-center pt-2 h-14 sm:w-64
-                `sm:h-16 xl:w-80 xl:h-20 2xl:w-110 2xl:h-24 inline-flex items-center bg-amber-50 rounded-lg">
-                  <h1 class="font-ruslan text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 animate-gradient-x cursor-default">
+                <span className="relative w-50 justify-center pt-2 h-14 sm:w-64 sm:h-16 xl:w-80 xl:h-20 2xl:w-110 2xl:h-24 inline-flex items-center bg-amber-50 dark:bg-slate-800 rounded-lg">
+                  <h1 className="font-ruslan text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 dark:from-slate-200 dark:to-slate-400 animate-gradient-x cursor-default">
                     Azam
                   </h1>
                 </span>
@@ -197,7 +196,7 @@ const Home = () => {
             <div className="mb-6 xl:mb-8 2xl:mb-10 relative">
               <div className="relative">
                 <h2
-                  className="font-black text-white cursor-default leading-[0.9] tracking-tighter select-none"
+                  className="font-black text-white cursor-default leading-[0.9] tracking-tighter select-none dark:text-white/90"
                   style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
                 >
                   DEVELOPER
@@ -240,7 +239,7 @@ const Home = () => {
             <div className="flex flex-wrap gap-3 xl:gap-4 mb-10 xl:mb-12 2xl:mb-16">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 xl:px-8 xl:py-4 2xl:px-10 2xl:py-5 bg-white text-orange-500 font-bold text-sm xl:text-base 2xl:text-lg rounded-xl xl:rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-200 group"
+                className="inline-flex items-center gap-2 px-6 py-3 xl:px-8 xl:py-4 2xl:px-10 2xl:py-5 bg-white text-orange-500 font-bold text-sm xl:text-base 2xl:text-lg rounded-xl xl:rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-200 group dark:text-slate-900 dark:bg-white/90 dark:hover:bg-white/100 dark:hover:shadow-2xl"
               >
                 View My Work
                 <svg

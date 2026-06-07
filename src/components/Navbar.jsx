@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import ThemeToggle from './ThemeToggle.jsx';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
@@ -55,7 +54,7 @@ const Navbar = () => {
           <a href="#contact" onClick={() => setActiveLink("contact")} className={linkClass("contact")}>
             Contact
           </a>
-            <ThemeToggle />
+          
         </nav>
 
         {/* Mobile Button */}

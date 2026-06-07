@@ -10,6 +10,7 @@ import Projects from './Projects.jsx'
 import CV from "./CVPORTFOLIO.jsx";
 import Contact from './Contact.jsx'
 import Footer from './Footer.jsx'
+import ThemeToggle from './ThemeToggle.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -33,6 +34,9 @@ createRoot(document.getElementById('root')).render(
       <section id='contact' className='scroll-mt-0'>
         <Contact />
       </section>
+      <div className="fixed bottom-12 right-6 z-50 shadow-lg hover:scale-110 transition-transform duration-300">
+        <ThemeToggle />
+      </div>
     </main>
     <footer>
       <Footer />
