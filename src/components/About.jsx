@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
-/* ─── Marquee icons (labels stay as tech names, no translation needed) ── */
+
 const marqueeIcons = [
   { icon: faReact,    color: "#61DAFB", label: "React" },
   { icon: faHtml5,    color: "#E34F26", label: "HTML5" },
@@ -22,7 +22,7 @@ const marqueeIcons = [
   { icon: faCode,     color: "#fff",    label: "Code" },
 ];
 
-/* ─── Service icons mapped by index ─────────────────────────── */
+
 const serviceIcons = [
   { icon: faLayerGroup, color: "text-cyan-300",    bg: "bg-cyan-400/10 border-cyan-400/20" },
   { icon: faPalette,    color: "text-pink-300",    bg: "bg-pink-400/10 border-pink-400/20" },
@@ -30,21 +30,21 @@ const serviceIcons = [
   { icon: faBolt,       color: "text-yellow-300",  bg: "bg-yellow-400/10 border-yellow-400/20" },
 ];
 
-/* ─── Timeline icons mapped by index ────────────────────────── */
+
 const timelineIcons = [
   { icon: faBriefcase,    accent: "bg-orange-300" },
   { icon: faGraduationCap, accent: "bg-white" },
   { icon: faRocket,       accent: "bg-amber-300" },
 ];
 
-/* ─── Marquee row ───────────────────────────────────────────── */
+
 function MarqueeRow({ reverse = false, speed = "30s" }) {
   const items = [...marqueeIcons, ...marqueeIcons, ...marqueeIcons];
 
   return (
     <div className="relative w-full overflow-hidden py-1 xl:py-2">
       
-      {/* FIX: isolate RTL completely */}
+      
       <div
         className="flex gap-6 xl:gap-8 2xl:gap-10 w-max"
         dir="ltr"
@@ -75,7 +75,7 @@ function MarqueeRow({ reverse = false, speed = "30s" }) {
 }
 
 
-/* ─── Main component ────────────────────────────────────────── */
+
 const AboutMe = () => {
   const { t } = useTranslation();
 
@@ -97,7 +97,7 @@ const AboutMe = () => {
         @keyframes marqueeRev { from { transform: translateX(-33.333%) } to { transform: translateX(0) } }
       `}</style>
 
-      {/* ── Background geometry ── */}
+      
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] xl:w-[700px] xl:h-[700px] 2xl:w-[900px] 2xl:h-[900px] rounded-full bg-orange-400/40 dark:bg-slate-800/50" />
         <div className="absolute -bottom-20 -left-20 w-72 h-72 xl:w-[480px] xl:h-[480px] 2xl:w-[600px] 2xl:h-[600px] rounded-full bg-amber-400/25 dark:bg-slate-800/50" />
@@ -107,7 +107,7 @@ const AboutMe = () => {
 
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-14 xl:py-20 2xl:py-28">
 
-        {/* ── Section header ── */}
+        
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
             <p className="text-white/60 text-xs cursor-default xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
@@ -125,13 +125,13 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* ── MAIN GRID: bio + timeline ── */}
+        
         <div className="grid grid-cols-1 cursor-default lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10 mb-10 xl:mb-14 2xl:mb-18">
 
-          {/* Bio — 3 cols */}
+          
           <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-            {/* Intro card */}
+            
             <div className="bg-black/30 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <div className="flex items-center gap-2 mb-4 xl:mb-5">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -144,7 +144,7 @@ const AboutMe = () => {
               </p>
             </div>
 
-            {/* Goal card */}
+            
             <div className="bg-black/20 cursor-default backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 flex gap-4 items-start">
               <div className="shrink-0 w-10 h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14 rounded-xl xl:rounded-2xl bg-orange-300/20 border border-orange-300/30 flex items-center justify-center dark:bg-slate-700/50 dark:border-slate-400">
                 <FontAwesomeIcon icon={faGraduationCap} className="text-orange-300 text-base xl:text-xl 2xl:text-2xl dark:text-slate-300" />
@@ -155,7 +155,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          {/* Timeline — 2 cols */}
+          
           <div className="lg:col-span-2 bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
             <div className="flex items-center gap-2 mb-6 xl:mb-7">
               <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -181,7 +181,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* ── SERVICES GRID ── */}
+        
         <div className="mb-12 xl:mb-16 2xl:mb-20">
           <div className="flex cursor-default items-center gap-3 mb-6 xl:mb-7 2xl:mb-8">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -202,7 +202,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* ── MARQUEE ROWS ── */}
+        
         <div className="flex flex-col gap-3 xl:gap-4 2xl:gap-5 -mx-5 sm:-mx-8 lg:-mx-14 xl:-mx-20 2xl:-mx-28 overflow-hidden"
         dir="ltr"
         style={{ unicodeBidi: "isolate" }}>

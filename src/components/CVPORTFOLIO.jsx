@@ -9,7 +9,7 @@ const CV = () => {
   return (
     <section className="relative w-full min-h-screen bg-orange-500 text-white overflow-x-hidden font-sans selection:bg-white/30 dark:bg-slate-900 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
 
-      {/* ── Background geometry ── */}
+      
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-28 -right-28 w-[460px] h-[460px] xl:w-[650px] xl:h-[650px] 2xl:w-[860px] 2xl:h-[860px] rounded-full bg-orange-400/45 dark:bg-slate-800/50" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 xl:w-96 xl:h-96 2xl:w-[500px] 2xl:h-[500px] rounded-full bg-amber-400/25 dark:bg-slate-800/50" />
@@ -19,7 +19,7 @@ const CV = () => {
 
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto w-full px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-14 xl:py-20 2xl:py-28 flex flex-col flex-1">
 
-        {/* ── Section header ── */}
+        
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
             <p className="text-white/60 cursor-default text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
@@ -40,13 +40,13 @@ const CV = () => {
           </div>
         </div>
 
-        {/* ── MAIN CONTENT ── */}
+        
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10 items-start">
 
-          {/* LEFT — CV preview card (3 cols) */}
+          
           <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-            {/* Document label row */}
+            
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -59,7 +59,7 @@ const CV = () => {
               </span>
             </div>
 
-            {/* CV image preview */}
+            
             <div className="relative group">
               <div className="absolute -inset-2 xl:-inset-3 rounded-[2rem] xl:rounded-[2.5rem] bg-white/10 border border-white/15 -z-10" />
               <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="block w-full">
@@ -81,7 +81,7 @@ const CV = () => {
               </a>
             </div>
 
-            {/* CTA buttons */}
+            
             <div className="flex flex-col sm:flex-row gap-3 xl:gap-4">
               <a href="/CV.pdf" download
                 className="flex-1 flex items-center justify-center gap-2 xl:gap-3 bg-white text-orange-500 font-bold py-3.5 xl:py-4 2xl:py-5 rounded-xl xl:rounded-2xl hover:scale-[1.02] hover:shadow-xl transition-all duration-200 text-sm xl:text-base 2xl:text-lg dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600">
@@ -100,10 +100,10 @@ const CV = () => {
             </div>
           </div>
 
-          {/* RIGHT — Stats + highlights (2 cols) */}
+          
           <div className="lg:col-span-2 cursor-pointer flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-            {/* Stats grid */}
+            
             <div className="bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <div className="flex items-center gap-2 mb-5 xl:mb-6">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -121,7 +121,7 @@ const CV = () => {
               </div>
             </div>
 
-            {/* Highlights list */}
+            
             <div className="bg-black/20 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <div className="flex items-center gap-2 mb-5 xl:mb-6">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -139,7 +139,7 @@ const CV = () => {
               </div>
             </div>
 
-            {/* Quick note */}
+            
             <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-6 2xl:p-7 flex gap-3 xl:gap-4 items-start">
               <div className="shrink-0 w-8 h-8 xl:w-10 xl:h-10 rounded-xl bg-white/15 flex items-center justify-center text-base xl:text-lg">
                 ✉️
