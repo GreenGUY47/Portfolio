@@ -25,7 +25,7 @@ function useCountUp(target, duration = 1200, start = false) {
   return count;
 }
 
-/* ─── Single stat card ───────────────────────────────────────── */
+
 function StatCard({ value, label, animate }) {
   const display = useCountUp(value, 1400, animate);
   return (
@@ -41,7 +41,7 @@ function StatCard({ value, label, animate }) {
   );
 }
 
-/* ─── Skill pill ─────────────────────────────────────────────── */
+
 function SkillPill({ name, delay }) {
   return (
     <span
@@ -53,7 +53,7 @@ function SkillPill({ name, delay }) {
   );
 }
 
-/* ─── Main component ─────────────────────────────────────────── */
+
 const Home = () => {
   const playerRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -96,7 +96,7 @@ const Home = () => {
   return (
     <section className="relative w-full min-h-screen bg-orange-500 text-white overflow-x-hidden font-sans selection:bg-white/30 dark:bg-slate-900 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
 
-      {/* ── Decorative background geometry ── */}
+      
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -right-24 w-[480px] h-[480px] xl:w-[700px] xl:h-[700px] 2xl:w-[900px] 2xl:h-[900px] rounded-full bg-orange-400/50 dark:bg-slate-800/50"
           style={{ transform: `translateY(${scrollY * 0.08}px)` }} />
@@ -107,10 +107,10 @@ const Home = () => {
           style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
       </div>
 
-      {/* ── Content wrapper ── */}
+      
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 lg:-left-2 xl:px-20 2xl:px-28 py-10 xl:py-16 xl:-left-15 2xl:py-20">
 
-        {/* ── GREETING ROW ── */}
+        
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 xl:mb-14 2xl:mb-18">
           <h2 className="flex items-center cursor-default gap-2 text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold dark:text-white/90">
             {t('home.greeting')}
@@ -129,13 +129,13 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ── HERO: Name + Image ── */}
+        
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 xl:gap-16 2xl:gap-24">
 
-          {/* LEFT */}
+          
           <div className="flex-1 w-full order-2 lg:order-1">
 
-            {/* Name headline */}
+          
             <div className="mb-6 xl:mb-8 2xl:mb-10">
               <p className="text-white/70 text-xs cursor-default xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-3 xl:mb-4">
                 {t('home.subtitle')}
@@ -150,7 +150,7 @@ const Home = () => {
               </h1>
             </div>
 
-            {/* Large typographic statement */}
+            
             <div className="mb-6 xl:mb-8 2xl:mb-10 relative">
               <div className="relative">
                 <h2 className="font-black text-white cursor-default leading-[0.9] tracking-tighter select-none dark:text-white/90"
@@ -168,19 +168,19 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Tagline */}
+            
             <p className="text-white/85 cursor-default text-sm sm:text-base xl:text-lg 2xl:text-xl leading-relaxed max-w-lg xl:max-w-xl 2xl:max-w-2xl mb-8 xl:mb-10 2xl:mb-12">
               {t('home.tagline')}
             </p>
 
-            {/* Skill pills */}
+            
             <div className="flex flex-wrap cursor-default gap-2 xl:gap-3 mb-10 xl:mb-12 2xl:mb-14">
               {skills.map((s, i) => (
                 <SkillPill key={s} name={s} delay={i * 60} />
               ))}
             </div>
 
-            {/* CTA buttons */}
+            
             <div className="flex flex-wrap gap-3 xl:gap-4 mb-10 xl:mb-12 2xl:mb-16">
               <a href="#projects"
                 className="inline-flex items-center gap-2 px-6 py-3 xl:px-8 xl:py-4 2xl:px-10 2xl:py-5 bg-white text-orange-500 font-bold text-sm xl:text-base 2xl:text-lg rounded-xl xl:rounded-2xl hover:scale-105 hover:shadow-xl transition-all duration-200 group dark:text-slate-900 dark:bg-white/90 dark:hover:bg-white/100 dark:hover:shadow-2xl">
@@ -195,7 +195,7 @@ const Home = () => {
               </a>
             </div>
 
-            {/* Bio card — desktop */}
+            
             <div className="hidden sm:block bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 max-w-xl xl:max-w-2xl">
               <div className="flex items-center gap-2 mb-3 xl:mb-4">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -209,7 +209,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* RIGHT — Photo */}
+          
           <div className="order-1 lg:order-2 flex-shrink-0 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[380px] xl:max-w-[440px] 2xl:max-w-[560px] mx-auto lg:mx-0">
             <div className="relative">
               <div className="absolute -inset-3 xl:-inset-5 rounded-[2.5rem] xl:rounded-[3rem] bg-white/10 border border-white/15" />
@@ -238,7 +238,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ── Bio mobile ── */}
+        
         <div className="mt-8 sm:hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-5 bg-white rounded-full" />
@@ -251,14 +251,14 @@ const Home = () => {
           </p>
         </div>
 
-        {/* ── STATS ROW ── */}
+        
         <div ref={statsRef} className="mt-14 xl:mt-20 2xl:mt-28 grid grid-cols-2 sm:grid-cols-4 gap-3 xl:gap-4 2xl:gap-6">
           {stats.map((s) => (
             <StatCard key={s.label} value={s.value} label={s.label} animate={statsVisible} />
           ))}
         </div>
 
-        {/* ── SCROLL HINT ── */}
+        
         <div className="mt-14 xl:mt-20 2xl:mt-24 flex flex-col items-center gap-2 opacity-50">
           <p className="text-white text-xs xl:text-sm uppercase tracking-[0.2em] font-medium">
             {t('home.scrollHint')}

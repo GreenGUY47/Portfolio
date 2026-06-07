@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-/* ─── ImgSlider ────────────────────────────────────────────── */
+
 export function ImgSlider() {
   const { t } = useTranslation();
   const images = Object.values(
@@ -171,7 +171,7 @@ export function ImgSlider() {
   );
 }
 
-/* ─── Projects page ─────────────────────────────────────────── */
+
 const Projects = () => {
   const { t } = useTranslation();
   const [videoReady, setVideoReady] = useState(false);
@@ -212,7 +212,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* ── VIDEO SECTION ── */}
+        
         <div className="mb-14 xl:mb-20 2xl:mb-24">
           <div className="flex items-center gap-3 mb-5 xl:mb-6 2xl:mb-7">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -245,7 +245,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* ── IMAGE GALLERY SECTION ── */}
+        
         <div>
           <div className="flex items-center gap-3 mb-6 xl:mb-8 2xl:mb-10">
             <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />

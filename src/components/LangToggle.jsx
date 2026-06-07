@@ -11,7 +11,7 @@ function LangToggle() {
 
     document.documentElement.lang = lang;
 
-    // 🔥 IMPORTANT: prevents layout shift issues
+    
     document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
   };
 

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-/* ─── Social icons (static, can't live in JSON) ─────────────── */
+
 const socialIcons = [
   {
     href: "https://github.com/GreenGUY47",
@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section className="relative w-full min-h-screen bg-orange-500 text-white overflow-x-hidden font-sans selection:bg-white/30 dark:bg-slate-900 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800">
 
-      {/* ── Background geometry ── */}
+      
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-28 -right-28 w-[460px] h-[460px] xl:w-[650px] xl:h-[650px] 2xl:w-[860px] 2xl:h-[860px] rounded-full bg-orange-400/45 dark:bg-slate-800/50" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 xl:w-96 xl:h-96 2xl:w-[500px] 2xl:h-[500px] rounded-full bg-amber-400/25 dark:bg-slate-800/50" />
@@ -53,7 +53,6 @@ const Contact = () => {
 
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 py-14 xl:py-20 2xl:py-28">
 
-        {/* ── Section header ── */}
         <div className="flex flex-col cursor-default sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 xl:mb-16 2xl:mb-20">
           <div>
             <p className="text-white/60 text-xs xl:text-sm 2xl:text-base font-semibold uppercase tracking-[0.25em] mb-2 xl:mb-3">
@@ -77,13 +76,13 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* ── MAIN GRID ── */}
+        
         <div className="grid grid-cols-1 cursor-default lg:grid-cols-5 gap-6 xl:gap-8 2xl:gap-10">
 
-          {/* LEFT — contact methods (3 cols) */}
+          
           <div className="lg:col-span-3 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-            {/* Intro card */}
+            
             <div className="bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <h3 className="text-white font-bold text-lg xl:text-xl 2xl:text-2xl mb-2">
                 {t('contact.intro.title')}
@@ -93,7 +92,7 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Email */}
+            
             <div className="flex flex-col gap-2 xl:gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -122,7 +121,7 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* WhatsApp */}
+            
             <div className="flex flex-col gap-2 xl:gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -151,7 +150,7 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Social links */}
+            
             <div className="flex flex-col gap-2 xl:gap-3">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -172,10 +171,10 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT — FAQ + location (2 cols) */}
+          
           <div className="lg:col-span-2 flex flex-col gap-5 xl:gap-6 2xl:gap-7">
 
-            {/* FAQ */}
+            
             <div className="bg-black/25 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <div className="flex items-center gap-2 mb-5 xl:mb-6">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -193,7 +192,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Location card */}
+            
             <div className="bg-black/20 backdrop-blur-md border border-white/15 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9">
               <div className="flex items-center gap-2 mb-4 xl:mb-5">
                 <div className="w-1 h-5 xl:h-6 bg-white rounded-full" />
@@ -222,7 +221,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* CTA card */}
+            
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl xl:rounded-3xl p-5 xl:p-7 2xl:p-9 flex flex-col gap-4">
               <p className="text-white font-bold text-base xl:text-lg 2xl:text-xl">{t('contact.cta.title')}</p>
               <p className="text-white/65 text-xs xl:text-sm 2xl:text-base leading-relaxed">{t('contact.cta.body')}</p>
