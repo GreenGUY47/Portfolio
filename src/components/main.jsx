@@ -1,47 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Analytics } from '@vercel/analytics/react'
 import '/src/index.css'
 import "@fontsource/ruslan-display";
-import Navbar from './Navbar.jsx'
-import Home from './Home.jsx'
-import AboutMe from './About.jsx'
-import Projects from './Projects.jsx'
-import CV from "./CVPORTFOLIO.jsx";
-import Contact from './Contact.jsx'
-import Footer from './Footer.jsx'
-import ThemeToggle from './ThemeToggle.jsx';
+import '../i18n';
+import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='flex flex-col gap-0 w-screen h-screen'>
-    <header>
-      <Navbar />
-    </header>
-    <main>
-      <section id='home' className='scroll-mt-20'>
-        <Home />
-      </section>
-      <section id='about' className='scroll-mt-0'>
-        <AboutMe />
-      </section>
-      <section id='projects' className='scroll-mt-0'>
-        <Projects />
-      </section>
-      <section id='cv' className='scroll-mt-0'>
-        <CV />
-      </section>
-      <section id='contact' className='scroll-mt-0'>
-        <Contact />
-      </section>
-      <div className="fixed bottom-12 right-6 z-50 shadow-lg hover:scale-110 transition-transform duration-300">
-        <ThemeToggle />
-      </div>
-    </main>
-    <footer>
-      <Footer />
-    </footer>
-    <Analytics />
-    </div>
+    <App />
   </StrictMode>
 )

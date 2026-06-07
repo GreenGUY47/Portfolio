@@ -1,0 +1,241 @@
+{
+  "navbar": {
+    "logo": "Portfolio",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "cv": "CV",
+      "contact": "Contact"
+    }
+  },
+
+  "home": {
+    "greeting": "Hey there",
+    "availability": "Available for work",
+    "subtitle": "Full Stack Developer",
+    "namePrefix": "My name is",
+    "name": "Azam",
+    "headline1": "DEVELOPER",
+    "headline2": "& DESIGNER",
+    "tagline": "I build modern, responsive, and scalable web applications with clean UI and smooth UX — from concept to deployment.",
+    "cta": {
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch"
+    },
+    "about": {
+      "label": "About",
+      "bio": "I build digital experiences where design meets performance and ideas turn into reality. As a Full Stack Web Developer, I specialize in crafting modern, high-speed, and scalable web applications using React, Node.js, MongoDB, and core web technologies. Every project I create is engineered with precision—clean architecture on the inside, and a visually refined interface on the outside."
+    },
+    "stats": {
+      "experience": { "value": "2+", "label": "Years Experience" },
+      "projects": { "value": "10+", "label": "Projects Shipped" },
+      "clients": { "value": "8+", "label": "Happy Clients" },
+      "satisfaction": { "value": "89%", "label": "Satisfaction Rate" }
+    },
+    "skills": ["React", "Node.js", "MongoDB", "TypeScript", "Tailwind", "Express", "Next.js", "Figma"],
+    "scrollHint": "Scroll to explore",
+    "techBadge": "React & Node.js"
+  },
+
+  "about": {
+    "eyebrow": "Get to know me",
+    "heading": "ABOUT ME",
+    "badge": "Full Stack Developer & Designer",
+    "intro": {
+      "label": "Intro",
+      "body": "I am a creative and detail-oriented Full Stack Web Developer passionate about building modern, responsive, and impactful digital experiences. I specialize in transforming ideas into powerful web applications that are fast, scalable, and visually refined. With strong expertise in React, HTML5, CSS3, and JavaScript, combined with backend skills in Node.js and MongoDB, I create complete solutions that balance performance with design."
+    },
+    "goal": {
+      "body": "I am constantly evolving — learning new frameworks, sharpening my problem-solving skills, and pushing the boundaries of what I can build. My goal is to craft meaningful digital products that leave a lasting impression. Whether working solo or in a team, I bring dedication, creativity, and a hunger for excellence to every project I touch."
+    },
+    "journey": {
+      "label": "Journey",
+      "items": [
+        {
+          "year": "2023 – Present",
+          "role": "Freelance Full Stack Developer",
+          "detail": "Delivering client projects across e-commerce, SaaS dashboards, and marketing sites."
+        },
+        {
+          "year": "2022 – 2023",
+          "role": "Self-Taught Intensive",
+          "detail": "Deep-dived into React, Node.js, MongoDB, and modern CSS — built 30+ real-world projects."
+        },
+        {
+          "year": "2022",
+          "role": "First Project Shipped",
+          "detail": "Launched a full-stack web app — the spark that made development a career, not a hobby."
+        }
+      ]
+    },
+    "services": {
+      "label": "What I Do",
+      "items": [
+        {
+          "title": "Full-Stack Development",
+          "desc": "End-to-end web apps from database schema to polished UI — architected for scale."
+        },
+        {
+          "title": "UI / UX Design",
+          "desc": "Pixel-perfect interfaces with intuitive flows and refined visual systems."
+        },
+        {
+          "title": "API & Backend",
+          "desc": "RESTful APIs, auth systems, and database integrations that perform under pressure."
+        },
+        {
+          "title": "Performance & Optimization",
+          "desc": "Lighthouse scores, Core Web Vitals, and lean bundles — speed is a feature."
+        }
+      ]
+    }
+  },
+
+  "projects": {
+    "eyebrow": "My work",
+    "heading": "PROJECTS",
+    "badge": "10+ Projects Shipped",
+    "video": {
+      "label": "Video Portfolio",
+      "loading": "Loading video",
+      "unsupported": "Your browser does not support the video tag."
+    },
+    "gallery": {
+      "label": "Screenshot Gallery",
+      "hint": "Hover to pause · Click to expand",
+      "altPrefix": "Project screenshot"
+    }
+  },
+
+  "cv": {
+    "eyebrow": "Portfolio",
+    "heading": "RÉSUMÉ",
+    "badge": "Available for Work",
+    "document": {
+      "label": "Curriculum Vitae — 2025",
+      "pdfReady": "PDF Ready",
+      "altText": "Azam — Curriculum Vitae",
+      "openLabel": "Open Full CV"
+    },
+    "cta": {
+      "download": "Download CV",
+      "viewInBrowser": "View in Browser"
+    },
+    "stats": {
+      "label": "By the Numbers",
+      "items": [
+        { "label": "Experience", "value": "2+ yrs" },
+        { "label": "Projects", "value": "10+" },
+        { "label": "Stack", "value": "MERN" },
+        { "label": "Clients", "value": "8+" }
+      ]
+    },
+    "highlights": {
+      "label": "Highlights",
+      "items": [
+        { "icon": "💼", "text": "Full Stack Developer" },
+        { "icon": "⚡", "text": "React & Node.js Expert" },
+        { "icon": "🎨", "text": "UI / UX Designer" },
+        { "icon": "🚀", "text": "Open to Opportunities" }
+      ]
+    },
+    "note": {
+      "title": "Let's collaborate",
+      "body": "Open to freelance projects, full-time roles, and exciting opportunities worldwide."
+    }
+  },
+
+  "contact": {
+    "eyebrow": "Let's talk",
+    "heading1": "GET IN",
+    "heading2": "TOUCH",
+    "badge": "Usually replies in a few hours",
+    "intro": {
+      "title": "Always open to new ideas 👋",
+      "body": "Whether it's a project, collaboration, a job opportunity, or just saying hello — I'd love to hear from you. Pick any channel below and let's start a conversation."
+    },
+    "email": {
+      "label": "Email",
+      "sublabel": "Write to me",
+      "address": "thegreenguy48@gmail.com"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "sublabel": "Message me",
+      "number": "+92 312 412 3581"
+    },
+    "social": {
+      "label": "Social",
+      "items": [
+        { "label": "GitHub",    "handle": "Azam-GreenGUY47" },
+        { "label": "LinkedIn",  "handle": "Azam Dev" },
+        { "label": "Instagram", "handle": "@azam249" }
+      ]
+    },
+    "faq": {
+      "label": "Quick Answers",
+      "items": [
+        {
+          "q": "What's your response time?",
+          "a": "Usually within a few hours — I check messages regularly."
+        },
+        {
+          "q": "Are you available for freelance?",
+          "a": "Yes! Open to short and long-term projects, remote worldwide."
+        },
+        {
+          "q": "Do you work in teams?",
+          "a": "Absolutely — I'm comfortable with Agile workflows and async collaboration."
+        }
+      ]
+    },
+    "location": {
+      "label": "Location",
+      "city": "Lahore, Pakistan",
+      "timezone": "GMT+5 · PKT",
+      "availability": "Available for remote work worldwide",
+      "zindabad": "🇵🇰 Pakistan Zindabad 🇵🇰"
+    },
+    "cta": {
+      "title": "Ready to build something great?",
+      "body": "Drop me a message and let's turn your idea into a real, polished product.",
+      "button": "Send a Message"
+    }
+  },
+
+  "footer": {
+    "eyebrow": "Portfolio",
+    "name": "AZAM",
+    "tagline": "Full Stack Developer & Designer crafting fast, scalable, and visually refined web experiences.",
+    "nav": {
+      "label": "Navigate",
+      "links": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "cv": "CV",
+        "contact": "Contact"
+      }
+    },
+    "stack": {
+      "label": "Tech Stack",
+      "items": ["React", "Node.js", "MongoDB", "Tailwind", "Express", "TypeScript"]
+    },
+    "contact": {
+      "label": "Contact",
+      "emailLabel": "Email",
+      "email": "thegreenguy48@gmail.com",
+      "whatsappLabel": "WhatsApp",
+      "whatsapp": "+92 312 412 3581",
+      "locationLabel": "Location",
+      "location": "🇵🇰 Lahore, Pakistan",
+      "availability": "Open to opportunities"
+    },
+    "bottom": {
+      "copyright": "© {{year}} Azam. Built with React, Tailwind CSS &",
+      "zindabad": "🇵🇰 Pakistan Zindabad",
+      "iconCredit": "Icons by Lordicon"
+    }
+  }
+}

@@ -80,7 +80,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans">
+    <footer className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans dark:bg-slate-900">
       {/* ── Top divider wave ── */}
       <div className="w-full overflow-hidden leading-none">
         <svg
@@ -99,8 +99,8 @@ const Footer = () => {
 
       {/* ── Background geometry ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -bottom-24 -right-24 w-72 h-72 xl:w-[420px] xl:h-[420px] rounded-full bg-orange-400/30" />
-        <div className="absolute top-0 -left-16 w-56 h-56 xl:w-80 xl:h-80 rounded-full bg-amber-400/15" />
+        <div className="absolute -bottom-24 -left-24 w-72 h-72 xl:w-[420px] xl:h-[420px] rounded-full bg-orange-400/30 dark:bg-slate-800/50" />
+        <div className="absolute top-0 -right-16 w-56 h-56 xl:w-80 xl:h-80 rounded-full bg-amber-400/15 dark:bg-slate-800/50" />
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
