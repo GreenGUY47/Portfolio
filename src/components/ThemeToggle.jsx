@@ -1,7 +1,7 @@
-import { useTheme } from '../hooks/useTheme'
+import { useTheme } from "../hooks/useTheme";
 
 export default function ThemeToggle() {
-  const { dark, toggle } = useTheme()
+  const { dark, toggle } = useTheme();
   return (
     <button
       onClick={toggle}
@@ -12,7 +12,7 @@ export default function ThemeToggle() {
         transition-colors duration-750 w-20 h-10 flex items-center justify-center"
       aria-label="Toggle dark mode"
     >
-      {dark ? 'NIGHT' : 'DAY'}
+      {dark ? "NIGHT" : "DAY"}
     </button>
-  )
+  );
 }

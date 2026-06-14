@@ -82,7 +82,6 @@ const Footer = () => {
 
   return (
     <footer className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans dark:bg-slate-900">
-      
       <div className="w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 56"
@@ -98,7 +97,6 @@ const Footer = () => {
         </svg>
       </div>
 
-      
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -bottom-24 -left-24 w-72 h-72 xl:w-[420px] xl:h-[420px] rounded-full bg-orange-400/30 dark:bg-slate-800/50" />
         <div className="absolute top-0 -right-16 w-56 h-56 xl:w-80 xl:h-80 rounded-full bg-amber-400/15 dark:bg-slate-800/50" />
@@ -113,9 +111,7 @@ const Footer = () => {
       </div>
 
       <div className="relative z-10 max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-5 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 pt-2 pb-8 xl:pt-4 xl:pb-12 2xl:pb-16">
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-10 2xl:gap-14 py-10 xl:py-14 2xl:py-16 border-b border-white/15">
-          
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-4 xl:gap-5">
             <div>
               <p className="text-white/55 text-xs xl:text-sm font-semibold uppercase tracking-[0.25em] mb-1.5">
@@ -129,7 +125,7 @@ const Footer = () => {
               Full Stack Developer & Designer crafting fast, scalable, and
               visually refined web experiences.
             </p>
-            
+
             <div className="flex gap-2 xl:gap-3 flex-wrap mt-1">
               {socials.map((s) => (
                 <a
@@ -146,7 +142,6 @@ const Footer = () => {
             </div>
           </div>
 
-          
           <div className="flex flex-col gap-3 xl:gap-4">
             <div className="flex items-center gap-2 mb-1">
               <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -178,7 +173,6 @@ const Footer = () => {
             ))}
           </div>
 
-          
           <div className="flex flex-col gap-3 xl:gap-4">
             <div className="flex items-center gap-2 mb-1">
               <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -198,7 +192,6 @@ const Footer = () => {
             </div>
           </div>
 
-          
           <div className="flex flex-col gap-3 xl:gap-4">
             <div className="flex items-center gap-2 mb-1">
               <div className="w-1 h-4 xl:h-5 bg-white rounded-full" />
@@ -238,7 +231,7 @@ const Footer = () => {
                 🇵🇰 Lahore, Pakistan
               </span>
             </div>
-            
+
             <div className="flex items-center gap-2 mt-1">
               <span className="relative flex h-2 w-2 xl:h-2.5 xl:w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75" />
@@ -251,7 +244,6 @@ const Footer = () => {
           </div>
         </div>
 
-        
         <div className="pt-6 xl:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 xl:gap-4">
           <LangToggle />
           <p className="text-white text-xs flex xl:text-sm 2xl:text-base text-center sm:text-left">
