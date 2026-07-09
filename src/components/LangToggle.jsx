@@ -17,7 +17,7 @@ function LangToggle() {
   return (
     <button
       onClick={() => changeLang(isUrdu ? "en" : "ur")}
-      className="px-3 py-2 rounded-xl bg-gray-700 text-white text-sm font-bold hover:bg-gray-600 transition"
+      className="px-3 py-2 rounded-xl dark:bg-gray-700 text-white text-sm font-bold dark:hover:bg-gray-600 transition bg-orange-600  border w-17 "
     >
       {isUrdu ? "English" : "اردو"}
     </button>

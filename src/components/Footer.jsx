@@ -81,7 +81,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans dark:bg-slate-900">
+    <footer dir="ltr" className="relative cursor-default w-full bg-orange-500 overflow-hidden font-sans dark:bg-slate-900">
       <div className="w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 56"
